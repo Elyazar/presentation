@@ -1,0 +1,80 @@
+.feedback
+  background-color: #ffffff
+  &__title h1
+    color: #647374
+    +exo2
+    font-size: 40px
+    font-weight: bold
+    text-align: center
+    padding-top: 35px
+    padding-bottom: 75px
+    margin: 0
+  &__cards
+    display: flex
+    justify-content: center
+  &__inner-3
+    margin-right: 10px
+  &__card
+    display: flex
+    align-items: center
+  .feedback__card-1,
+  .feedback__card-3,
+  .feedback__card-5
+    margin-bottom: 25px
+  &__description p
+    +exo2
+    font-size: 20px
+    font-weight: bold
+    margin: 0
+  &__description span
+    +exo2
+    font-size: 18px
+    font-weight: light
+  &__date
+    +exo2
+    font-size: 20px
+    font-weight: light
+  &__img
+    width: 110px
+    height: 110px
+    margin: auto 15px
+    border-radius: 50%
+  &__button
+    margin-top: 30px
+    margin-bottom: 30px
+    margin-left: 50%
+    transform: translateX(-50%)
+
+
+@media (max-width: 1100px)
+  .feedback
+    &__card
+      text-align: center
+      flex-direction: column
+  .feedback__card-1,
+  .feedback__card-3,
+  .feedback__card-5
+    margin-bottom: 35px
+@media (max-width: 850px)
+  .feedback__inner-1,
+  .feedback__inner-2,
+  .feedback__inner-3
+    display: flex
+    margin: 20px auto
+  .feedback__card-1,
+  .feedback__card-3,
+  .feedback__card-5
+    margin-bottom: 0
+    margin-right: 30px
+  .feedback
+    &__cards
+      flex-direction: column
+@media (max-width: 620px)
+  .feedback__inner-1,
+  .feedback__inner-2,
+  .feedback__inner-3
+    flex-direction: column
+  .feedback__card-1,
+  .feedback__card-3,
+  .feedback__card-5
+    margin: 0

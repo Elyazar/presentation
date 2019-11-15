@@ -1,0 +1,84 @@
+.action
+  color: #ffffff
+  background-image: url('../img/action-bg.jpg')
+  background-repeat: no-repeat
+  background-position: center center
+  background-size: cover
+  height: 100vh
+  &__outer
+    padding-top: 100px
+    max-width: 1000px
+    margin: 0 auto
+  &__inner
+    max-width: 580px
+  &__title h1
+    text-align: center
+    color: yellow
+    margin: 0
+    +marck
+    font-size: 70px
+  &__subtitle p
+    +marck
+    font-size: 45px
+    font-weight: 100
+  &__bottom-line
+    margin-left: 280px
+  &__passage
+    color: yellow
+.action__button
+  margin-top: 20px
+  margin-left: 240px
+
+@media (max-width: 1080px)
+  .action
+    &__inner
+      text-align: center
+      margin: 0 20px
+    &__bottom-line
+      margin-left: 0
+@media (max-width: 960px)
+  .action
+    &__outer
+      padding-top: 50px
+    &__button
+      margin-left: 160px
+@media (max-width: 820px)
+  .action
+    &__button
+      margin-left: 140px
+@media (max-width: 800px)
+  .action
+    &__inner
+      margin: 0 auto !important
+    &__subtitle p
+      color: #000000
+      padding: 10px
+      border-radius: 50%
+      background-color: #ffffff
+    &__passage
+      padding: 0 20px
+      background-color: #000000
+      border-radius: 50%
+    &__button
+      margin-left: 50%
+      transform: translateX(-50%)
+@media (max-width: 605px)
+  .action
+    &__inner
+      padding: 0 20px
+    &__title h1
+      font-size: 50px
+    &__subtitle p
+      font-size: 35px
+@media (max-width: 475px)
+  .action
+    &__title h1
+      font-size: 40px
+    &__subtitle p
+      font-size: 30px
+@media (max-width: 400px)
+  .action
+    &__title h1
+      font-size: 30px
+    &__subtitle p
+      font-size: 20px

@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Doc</title>
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style4.css">
+
+  <link href="https://fonts.googleapis.com/css?family=Exo+2:300,400,500,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Amatic+SC&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Marck+Script&display=swap&subset=cyrillic" rel="stylesheet">
+
+</head>
+<body>
+  
+
+<header class="header">
+  <div class="container header__container">
+
+    <div class="logo">
+      <span class="logo__title">KURS-DIPLO</span>
+      <span class="logo__subtitle">Написание всех видов студенческих <br> работ по России и СНГ</span>
+    </div>
+
+    <nav class="menu">
+      <ul class="menu__inner">
+        <li class="menu__li"><a href="#">Цены</a></li>
+        <li class="menu__li"><a href="#">Преимущества</a></li>
+        <li class="menu__li"><a href="#">Отзывы</a></li>
+      </ul>
+    </nav>
+
+    <div class="social">
+      <div class="social__block-l">
+          <a href="https://vk.com/svetik_kurs" class="social__link"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/VK.com-logo.svg/1200px-VK.com-logo.svg.png" alt="vk" class="social__img vk-img"></a>
+
+          <a href="#" class="social__link"><img src="https://pngicon.ru/file/uploads/instagram.png" alt="instagramm" class="social__img insta-img"></a>
+      </div>
+
+      <div class="social__block-r">
+          <a href="#" class="social__link"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/WhatsApp_logo-color-vertical.svg/294px-WhatsApp_logo-color-vertical.svg.png" alt="whats-app" class="social__img whats-img"></a>
+
+          <a href="#" class="social__link"><img src="https://www.freeiconspng.com/uploads/--------------------------------icon-12.png" alt="telegramm" class="social__img tg-img"></a>
+      </div>
+    </div>
+
+  </div>
+</header>
+
+<section class="action">
+  <div class="action__outer">
+      <div class="action__inner">
+          <div class="action__title">
+              <h1>Акция</h1>
+          </div>
+          <div class="action__subtitle">
+            <p>Получи работу в срок <br> <span class="action__bottom-line">или <span class="action__passage">бесплатно</span>!</span></p>
+          </div>
+      </div>
+  </div>
+
+  <script>
+      function CountBox() {
+        dateNow = new Date();
+        amount = ((23 - dateNow.getHours())*60*60 + (59 - dateNow.getMinutes())*60 + (60 - dateNow.getSeconds()))*1000;
+        delete dateNow;
+        if (amount < 0) {
+          out = "<div class='countbox-num'><div id='countbox-days1'><span></span>0</div><div id='countbox-days2'><span></span>0</div><div id='countbox-days-text'></div></div>" +
+          "<div class='countbox-space'></div>" +
+          "<div class='countbox-num'><div id='countbox-hours1'><span></span>0</div><div id='countbox-hours2'><span></span>0</div><div id='countbox-hours-text'></div></div>" +
+          "<div class='countbox-space'></div>" +
+          "<div class='countbox-num'><div id='countbox-mins1'><span></span>0</div><div id='countbox-mins2'><span></span>0</div><div id='countbox-mins-text'></div></div>" +
+          "<div class='countbox-space'></div>" +
+          "<div class='countbox-num'><div id='countbox-secs1'><span></span>0</div><div id='countbox-secs2'><span></span>0</div><div id='countbox-secs-text'></div></div>";
+          document.getElementById("countbox").innerHTML = out;
+          setTimeout("CountBox()", 10000)
+        } else {
+          days = 0;
+          days1 = 0;
+          days2 = 0;
+          hours = 0;
+          hours1 = 0;
+          hours2 = 0;
+          mins = 0;
+          mins1 = 0;
+          mins2 = 0;
+          secs = 0;
+          secs1 = 0;
+          secs2 = 0;
+          out = "";
+          amount = Math.floor(amount / 1e3);
+          days = Math.floor(amount / 86400);
+          days1 = (days >= 10) ? days.toString().charAt(0) : '0';
+          days2 = (days >= 10) ? days.toString().charAt(1) : days.toString().charAt(0);
+          amount = amount % 86400;
+          hours = Math.floor(amount / 3600);
+          hours1 = (hours >= 10) ? hours.toString().charAt(0) : '0';
+          hours2 = (hours >= 10) ? hours.toString().charAt(1) : hours.toString().charAt(0);
+          amount = amount % 3600;
+          mins = Math.floor(amount / 60);
+          mins1 = (mins >= 10) ? mins.toString().charAt(0) : '0';
+          mins2 = (mins >= 10) ? mins.toString().charAt(1) : mins.toString().charAt(0);
+          amount = amount % 60;
+          secs = Math.floor(amount);
+          secs1 = (secs >= 10) ? secs.toString().charAt(0) : '0';
+          secs2 = (secs >= 10) ? secs.toString().charAt(1) : secs.toString().charAt(0);
+          out = "<div class='countbox-num'><div id='countbox-days1'><span></span>" + days1 + "</div><div id='countbox-days2'><span></span>" + days2 + "</div><div id='countbox-days-text'></div></div>" +
+          "<div class='countbox-space'>:</div>" +
+          "<div class='countbox-num'><div id='countbox-hours1'><span></span>" + hours1 + "</div><div id='countbox-hours2'><span></span>" + hours2 + "</div><div id='countbox-hours-text'></div></div>" +
+          "<div class='countbox-space'>:</div>" +
+          "<div class='countbox-num'><div id='countbox-mins1'><span></span>" + mins1 + "</div><div id='countbox-mins2'><span></span>" + mins2 + "</div><div id='countbox-mins-text'></div></div>" +
+          "<div class='countbox-space'>:</div>" +
+          "<div class='countbox-num'><div id='countbox-secs1'><span></span>" + secs1 + "</div><div id='countbox-secs2'><span></span>" + secs2 + "</div><div id='countbox-secs-text'></div></div>";
+          document.getElementById("countbox").innerHTML = out;
+          setTimeout("CountBox()", 1e3)
+        }
+      }
+      window.onload = function () {
+        CountBox()
+      }
+    </script>
+<div id="countbox"></div>
+
+  <button class="button action__button">
+    узнать подробнее
+  </button>
+
+</section>
+
+<section class="feature">
+    <div class="feature__title">
+      <h1>НАШИ ПРЕИМУЩЕСТВА</h1>
+    </div>
+    <div class="feature__cards">
+      <div class="feature__inner-top">
+          <div class="feature__card feature__card-1">
+              <img class="feature__img" src="img/feature/img-1.png"/>
+              <div class="feature__description"><p>Средняя оригинальность <br> наших работ <br> <span>83%</span> </p></div>
+            </div>
+            <div class="feature__card feature__card-2">
+                <img class="feature__img" src="img/feature/img-2.png"/>
+              <div class="feature__description"><p>Помогли <span>4347</span> студентам <br> из <span>67</span> городов россии и снг</p></div>
+            </div>
+            <div class="feature__card feature__card-3">
+                <img class="feature__img" src="img/feature/img-3.png"/>
+              <div class="feature__description"><p><span>4,65</span> - средний балл наших <br> работ за <span>5</span> лет работы</p></div>
+            </div>
+      </div>
+      <div class="feature__inner-bottom">
+          <div class="feature__card feature__card-4">
+              <img class="feature__img" src="img/feature/img-4.png"/>
+            <div class="feature__description"><p><span>300</span> профессиональных авторов, <br> <span>7</span> персональных менеджеров в штате</p></div>
+          </div>
+          <div class="feature__card feature__card-5">
+              <img class="feature__img" src="img/feature/img-5.png"/>
+            <div class="feature__description"><p>Мы работаем круглосуточно <br> <span>7</span> дней в неделю</p></div>
+          </div>
+      </div>
+  </div>
+</section>
+
+<section class="working">
+    <div class="working__title">
+        <h1>Как мы работаем?</h1>
+      </div>
+      <div class="working__cards">
+        <div class="working__inner-top">
+            <div class="working__card working__card-1">
+                <img class="working__img" src="img/working/img-1.png"/>
+                <div class="working__description"><p>ОФОРМЛЕНИЕ ЗАКАЗА <br> УТОЧНЕНИЕ СТОИМОСТИ</p> <span>Заполняете форму заказа, <br> менеджер уточняет детали <br> заказа и производится оценка <br> работы автором</span></div>
+              </div>
+              <div class="working__card working__card-2">
+                  <img class="working__img" src="img/working/img-2.png"/>
+                <div class="working__description"><p>ЗАКЛЮЧЕНИЕ <br> ДОГОВОРА</p> <span>Заключаем официальный <br> договор, который является <br> гарантией качественного <br> выполнения заказа в срок</span></div>
+              </div>
+              <div class="working__card working__card-3">
+                  <img class="working__img" src="img/working/img-3.png"/>
+                <div class="working__description"><p>ВРЕМЯ РАБОТЫ <br> ПРОФЕССИОНАЛА</p> <span>Производится поэтапная <br> работа над вашим заказом, <br> все корректировки <br> выполняются бесплатно</span></div>
+              </div>
+        </div>
+        <div class="working__inner-bottom">
+            <div class="working__card working__card-4">
+                <img class="working__img" src="img/working/img-4.png"/>
+              <div class="working__description"><p>ПОЛНЫЙ КОНТРОЛЬ <br> ПРОЦЕССА НАПИСАНИЯ</p> <span>На всех этапах наши <br> менеджеры четко <br> контролируют процесс</span></div>
+            </div>
+            <div class="working__card working__card-5">
+                <img class="working__img" src="img/working/img-5.png"/>
+              <div class="working__description"><p>СДАЧА РАБОТЫ <br> И СОПРОВОЖДЕНИЕ</p> <span>Сдача работы - точно в срок, <br> консультация автора - <br> бесплатно до самой защиты!</span></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="feedback">
+  <div class="feedback__title">
+        <h1>Отзывы наших клиентов</h1>
+      </div>
+
+      <div class="feedback__cards">
+
+        <div class="feedback__inner-1">
+            <div class="feedback__card feedback__card-1">
+                <img class="feedback__img" src="img/feedback/img-1.jpg"/>
+                <div class="feedback__description"><p>Марина, Воронеж</p> <span>Работа выполнена на отлично! <br> В быстрый срок да и за доступные <br> деньги.Буду рекомендовать <br> друзьям) <br> <span class="feedback__date">05.11.2019</span></span></div>
+              </div>
+              <div class="feedback__card feedback__card-2">
+                  <img class="feedback__img" src="img/feedback/img-2.jpg"/>
+                <div class="feedback__description"><p>Павел, Белгород</p> <span>Меня все устроило, цена <br> подходящая, сроки не большие, <br> и главное самому не нужно <br> париться) <br> <span class="feedback__date">05.09.2017</span></span></div>
+              </div>
+        </div>
+
+        <div class="feedback__inner-2">
+            <div class="feedback__card feedback__card-3">
+                <img class="feedback__img" src="img/feedback/img-3.jpg"/>
+              <div class="feedback__description">
+                  <p>Георгий, Томск</p> <span>Очень качественно выполнена <br> была работа,   защитился без <br> проблем, буду еще заказывать <br> <span class="feedback__date">05.04.2018</span></span>
+              </div>
+            </div>
+            <div class="feedback__card feedback__card-4">
+                <img class="feedback__img" src="img/feedback/img-4.jpg"/>
+              <div class="feedback__description"><p>Иван, Москва</p> <span>Спасибо за работу))) получил <br> 4))) буду еще обращаться))) <br> <span class="feedback__date">19.02.2019</span></span></div>
+            </div>
+        </div>
+
+        <div class="feedback__inner-3">
+            <div class="feedback__card feedback__card-5">
+                <img class="feedback__img" src="img/feedback/img-5.jpg"/>
+              <div class="feedback__description"><p>Юлия, Смоленск</p>
+                <span>Ребят, он правда делает <br> курсачи и дипломы. И не <br> кидает, честный человек <br> <span class="feedback__date">12.04.2017</span></span></div>
+            </div>
+            <div class="feedback__card feedback__card-6">
+                <img class="feedback__img" src="img/feedback/img-6.jpg"/>
+              <div class="feedback__description"><p>Александр, <br> Нижний Новгород</p> <span>Дипломные работы что <br>
+                  заказывал были довольно <br> хорошие.. <br> Иногда спасал, когда делал <br> хороший курсач за пару дней..)) <br> В общем буду рекомендовать. <br> <span class="feedback__date">11.03.2019</span></span></div>
+            </div>
+        </div>
+    </div>
+
+    <button class="button feedback__button">
+      оставить отзыв
+    </button>
+</section>
+
+
+
+  <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+  <!-- <script type="text/javascript" src="slick/slick.min.js"></script>
+  <script src="js/script.js"></script> -->
+</body>
+</html>
