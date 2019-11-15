@@ -159,9 +159,17 @@ body {
   }
 }
 
+* {
+  outline: 1px solid red !important;
+}
+
 body {
   padding: 0;
   margin: 0;
+}
+
+h1 {
+  display: none;
 }
 
 .container {
