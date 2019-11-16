@@ -1,10 +1,7 @@
 .feedback
   background-color: #ffffff
-  &__title h1
+  &__title
     color: #647374
-    +exo2
-    font-size: 40px
-    font-weight: bold
     text-align: center
     padding-top: 35px
     padding-bottom: 75px
@@ -42,8 +39,10 @@
   &__button
     margin-top: 30px
     margin-bottom: 30px
-    margin-left: 50%
-    transform: translateX(-50%)
+.button
+  &__box
+    display: flex
+    justify-content: center
 
 
 @media (max-width: 1100px)
@@ -51,6 +50,8 @@
     &__card
       text-align: center
       flex-direction: column
+    &__img
+      margin-bottom: 30px
   .feedback__card-1,
   .feedback__card-3,
   .feedback__card-5

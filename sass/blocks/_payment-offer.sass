@@ -1,0 +1,60 @@
+.payment-offer
+  display: flex
+  justify-content: center
+  padding-bottom: 35px
+  background-color: #ffffff
+.payment
+  margin-right: 20px
+  &__title h5
+    color: #647374
+    text-align: left
+    margin: 20px 0
+  &__subtitle
+    +exo2
+    font-weight: light
+    font-size: 17px
+  &__img-wrap
+    display: flex
+    flex-wrap: wrap
+    align-items: center
+    text-align: left
+    margin-top: 50px
+  &__img-wrap img
+    margin: 0 10px
+    height: 30px
+.separator
+  color: #647374
+  font-size: 30px
+  font-weight: bold
+
+
+.offer
+  margin-left: 20px
+  display: flex
+  flex-direction: column
+  &__title h6
+    color: #647374
+    text-align: left
+    margin: 20px 0
+  &__subtitle
+    +exo2
+    font-weight: light
+    font-size: 17px
+    margin-bottom: 25px
+  &__button
+    max-width: 250px
+
+@media (max-width: 660px)
+  .payment-offer
+    flex-direction: column
+    text-align: center
+  .payment__title h5,
+  .payment__img-wrap
+    text-align: center
+    margin-left: 50%
+    transform: translateX(-50%)
+  .offer__title h6,
+  .offer__button
+    margin-left: 50%
+    transform: translateX(-50%)
+    text-align: center

@@ -13,47 +13,49 @@
   <link href="https://fonts.googleapis.com/css?family=Amatic+SC&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Marck+Script&display=swap&subset=cyrillic" rel="stylesheet">
 
+  
 </head>
 <body>
-  
 
-<header class="header">
-  <div class="container header__container">
+<header class="header__outer">
+  <div class="header">
+      <div class="container header__container">
 
-    <div class="logo">
-      <span class="logo__title">KURS-DIPLO</span>
-      <span class="logo__subtitle">Написание всех видов студенческих <br> работ по России и СНГ</span>
-    </div>
-
-    <nav class="menu">
-      <ul class="menu__inner">
-        <li class="menu__li"><a href="#">Цены</a></li>
-        <li class="menu__li"><a href="#">Преимущества</a></li>
-        <li class="menu__li"><a href="#">Отзывы</a></li>
-      </ul>
-    </nav>
-
-    <div class="social">
-      <div class="social__block-l">
-          <a href="https://vk.com/svetik_kurs" class="social__link"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/VK.com-logo.svg/1200px-VK.com-logo.svg.png" alt="vk" class="social__img vk-img"></a>
-
-          <a href="#" class="social__link"><img src="https://pngicon.ru/file/uploads/instagram.png" alt="instagramm" class="social__img insta-img"></a>
-      </div>
-
-      <div class="social__block-r">
-          <a href="#" class="social__link"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/WhatsApp_logo-color-vertical.svg/294px-WhatsApp_logo-color-vertical.svg.png" alt="whats-app" class="social__img whats-img"></a>
-
-          <a href="#" class="social__link"><img src="https://www.freeiconspng.com/uploads/--------------------------------icon-12.png" alt="telegramm" class="social__img tg-img"></a>
-      </div>
-    </div>
-
+          <div class="logo">
+            <span class="logo__title">KURS-DIPLO</span>
+            <span class="logo__subtitle">Написание всех видов студенческих <br> работ по России и СНГ</span>
+          </div>
+      
+          <nav class="menu">
+            <ul class="menu__inner">
+              <li class="menu__li"><a href="#conditions">Цены</a></li>
+              <li class="menu__li"><a href="#feature">Преимущества</a></li>
+              <li class="menu__li"><a href="#feedback">Отзывы</a></li>
+            </ul>
+          </nav>
+      
+          <div class="social">
+            <div class="social__block-l">
+                <a href="https://vk.com/svetik_kurs" class="social__link"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/VK.com-logo.svg/1200px-VK.com-logo.svg.png" alt="vk" class="social__img vk-img"></a>
+      
+                <a href="#" class="social__link"><img src="https://pngicon.ru/file/uploads/instagram.png" alt="instagramm" class="social__img insta-img"></a>
+            </div>
+      
+            <div class="social__block-r">
+                <a href="#" class="social__link"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/WhatsApp_logo-color-vertical.svg/294px-WhatsApp_logo-color-vertical.svg.png" alt="whats-app" class="social__img whats-img"></a>
+      
+                <a href="#" class="social__link"><img src="https://www.freeiconspng.com/uploads/--------------------------------icon-12.png" alt="telegramm" class="social__img tg-img"></a>
+            </div>
+          </div>
+      
+        </div>
   </div>
 </header>
 
 <section class="action">
   <div class="action__outer">
       <div class="action__inner">
-          <div class="action__title">
+          <div class="action__title title">
               <h1>Акция</h1>
           </div>
           <div class="action__subtitle">
@@ -62,7 +64,7 @@
       </div>
   </div>
 
-  <!-- <script>
+    <script>
       function CountBox() {
         dateNow = new Date();
         amount = ((23 - dateNow.getHours())*60*60 + (59 - dateNow.getMinutes())*60 + (60 - dateNow.getSeconds()))*1000;
@@ -107,13 +109,13 @@
           secs = Math.floor(amount);
           secs1 = (secs >= 10) ? secs.toString().charAt(0) : '0';
           secs2 = (secs >= 10) ? secs.toString().charAt(1) : secs.toString().charAt(0);
-          out = "<div class='countbox-num'><div id='countbox-days1'><span></span>" + days1 + "</div><div id='countbox-days2'><span></span>" + days2 + "</div><div id='countbox-days-text'></div></div>" +
+          out = "<div class='countbox-num'><div id='countbox-days1'><span></span>" + days1 + "</div><div id='countbox-days2'><span></span>" + days2 + "</div><div id='countbox-days-text'>Дни</div></div>" +
           "<div class='countbox-space'>:</div>" +
-          "<div class='countbox-num'><div id='countbox-hours1'><span></span>" + hours1 + "</div><div id='countbox-hours2'><span></span>" + hours2 + "</div><div id='countbox-hours-text'></div></div>" +
+          "<div class='countbox-num'><div id='countbox-hours1'><span></span>" + hours1 + "</div><div id='countbox-hours2'><span></span>" + hours2 + "</div><div id='countbox-hours-text'>Часы</div></div>" +
           "<div class='countbox-space'>:</div>" +
-          "<div class='countbox-num'><div id='countbox-mins1'><span></span>" + mins1 + "</div><div id='countbox-mins2'><span></span>" + mins2 + "</div><div id='countbox-mins-text'></div></div>" +
+          "<div class='countbox-num'><div id='countbox-mins1'><span></span>" + mins1 + "</div><div id='countbox-mins2'><span></span>" + mins2 + "</div><div id='countbox-mins-text'>Минуты</div></div>" +
           "<div class='countbox-space'>:</div>" +
-          "<div class='countbox-num'><div id='countbox-secs1'><span></span>" + secs1 + "</div><div id='countbox-secs2'><span></span>" + secs2 + "</div><div id='countbox-secs-text'></div></div>";
+          "<div class='countbox-num'><div id='countbox-secs1'><span></span>" + secs1 + "</div><div id='countbox-secs2'><span></span>" + secs2 + "</div><div id='countbox-secs-text'>Секунды</div></div>";
           document.getElementById("countbox").innerHTML = out;
           setTimeout("CountBox()", 1e3)
         }
@@ -122,7 +124,7 @@
         CountBox()
       }
     </script>
-<div id="countbox"></div> -->
+    <div id="countbox"></div>
 
   <button class="button action__button">
     узнать подробнее
@@ -130,9 +132,30 @@
 
 </section>
 
-<section class="feature">
-    <div class="feature__title">
-      <h1>НАШИ ПРЕИМУЩЕСТВА</h1>
+<section class="conditions" id="conditions">
+  <div class="conditions">
+    <div class="conditions__title"></div>
+    <div class="conditions__left">
+      <img src="" alt="">
+      <p></p>
+      <span></span><img src="" alt="">
+      <p></p>
+      <span></span>
+    </div>
+    <div class="conditions__right">
+      <img src="" alt="">
+      <p></p>
+      <span></span><img src="" alt="">
+      <p></p>
+      <span></span>
+    </div>
+  </div>
+  <form action=""></form>
+</section>
+
+<section class="feature" id="feature">
+    <div class="feature__title title">
+      <h2>НАШИ ПРЕИМУЩЕСТВА</h2>
     </div>
     <div class="feature__cards">
       <div class="feature__inner-top">
@@ -163,8 +186,8 @@
 </section>
 
 <section class="working">
-    <div class="working__title">
-        <h1>Как мы работаем?</h1>
+    <div class="working__title title">
+        <h3>Как мы работаем?</h3>
       </div>
       <div class="working__cards">
         <div class="working__inner-top">
@@ -194,9 +217,9 @@
     </div>
 </section>
 
-<section class="feedback">
-  <div class="feedback__title">
-        <h1>Отзывы наших клиентов</h1>
+<section class="feedback" id="feedback">
+  <div class="feedback__title title">
+        <h4>Отзывы наших клиентов</h4>
       </div>
 
       <div class="feedback__cards">
@@ -239,15 +262,83 @@
         </div>
     </div>
 
-    <button class="button feedback__button">
-      оставить отзыв
-    </button>
+    <div class="button__box">
+          <button class="button feedback__button">
+            оставить отзыв
+          </button>
+    </div>
 </section>
 
+<section class="price">
+  <form action=""></form>
+</section>
 
+<section class="payment-offer">
+
+  <div class="payment">
+    <div class="payment__title title">
+      <h5>СПОСОБЫ ОПЛАТЫ</h5>
+    </div>
+    <span class="payment__subtitle">Принимаем оплату самыми удобными и популярными способами. <br> Все платежи проходят максимально быстро.</span>
+    <div class="payment__img-wrap">
+      <img src="img/payment/img-1.png" alt="">
+      <span class="separator">/</span>
+      <img src="img/payment/img-2.png" alt="">
+      <span class="separator">/</span>
+      <img src="img/payment/img-3.png" alt="">
+      <span class="separator">/</span>
+      <img src="img/payment/img-4.png" alt="">
+      <span class="separator">/</span>
+      <img src="img/payment/img-5.png" alt="">
+    </div>
+  </div>
+
+<div class="offer">
+  <div class="offer__title title">
+    <h6>ВЫ АВТОР И ХОТИТЕ РАБОТАТЬ С НАМИ?</h6>
+  </div>
+  <span class="offer__subtitle">Мы всегда рады новым профессионалам в нашей команде! <br> Приглашаем к взаимовыгодному сотрудничеству преподавателей, <br> профессиональных авторов по всем направлениям.</span>
+  <button class="offer__button button">оставить заявку</button>
+</div>
+
+</section>
+
+<footer class="footer" style="display: none;">
+    <div class="container header__container">
+
+        <div class="logo">
+          <span class="logo__title">KURS-DIPLO</span>
+          <span class="logo__subtitle">Написание всех видов студенческих <br> работ по России и СНГ</span>
+        </div>
+    
+        <nav class="menu">
+          <ul class="menu__inner">
+            <li class="menu__li"><a href="#">Цены</a></li>
+            <li class="menu__li"><a href="#">Преимущества</a></li>
+            <li class="menu__li"><a href="#">Отзывы</a></li>
+          </ul>
+        </nav>
+    
+        <div class="social">
+          <div class="social__block-l">
+              <a href="https://vk.com/svetik_kurs" class="social__link"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/VK.com-logo.svg/1200px-VK.com-logo.svg.png" alt="vk" class="social__img vk-img"></a>
+    
+              <a href="#" class="social__link"><img src="https://pngicon.ru/file/uploads/instagram.png" alt="instagramm" class="social__img insta-img"></a>
+          </div>
+    
+          <div class="social__block-r">
+              <a href="#" class="social__link"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/WhatsApp_logo-color-vertical.svg/294px-WhatsApp_logo-color-vertical.svg.png" alt="whats-app" class="social__img whats-img"></a>
+    
+              <a href="#" class="social__link"><img src="https://www.freeiconspng.com/uploads/--------------------------------icon-12.png" alt="telegramm" class="social__img tg-img"></a>
+          </div>
+        </div>
+    
+      </div>
+</footer>
 
   <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
   <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script src="js/animation-link.js"></script>
 
   <!-- <script type="text/javascript" src="slick/slick.min.js"></script>
   <script src="js/script.js"></script> -->
