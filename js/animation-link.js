@@ -1,14 +1,28 @@
-$(function(){
-  $('a[href^="#"]').on('click', function(event) {
-    // отменяем стандартное действие
-    event.preventDefault();
-    
-    var sc = $(this).attr("href"),
-        dn = $(sc).offset().top;
-    /*
-    * sc - в переменную заносим информацию о том, к какому блоку надо перейти
-    * dn - определяем положение блока на странице
-    */
-    $('html, body').animate({scrollTop: dn}, 1500);
-  });
+$('a[href^="#"]').bind("click", function(e) {
+  var anchor = $(this);
+  $('html, body').stop().animate({
+      scrollTop: $(anchor.attr('href')).offset().top - 125
+  }, 1000);
+  e.preventDefault();
 });
+
+
+
+
+//$(document).ready(function(){
+  // = Вешаем событие прокрутки к нужному месту
+    //	 на все ссылки якорь которых начинается на #
+    //$('a[href^="#"]').bind('click.smoothscroll',function (e) {
+      //e.preventDefault();
+  
+      //var target = this.hash,
+      //$target = $(target);
+  
+      //$('html, body').stop().animate({
+        //'scrollTop': $target.offset().top - 125
+      //}, 900, 'swing', function () {
+        //window.location.hash = target;
+      //});
+    //});
+  
+  //});
